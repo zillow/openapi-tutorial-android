@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Pet Store</string>
+
+    <string name="store_address">Address: %1$s</string>
+    <string name="store_phone">Phone Number: %1$s</string>
+    <string name="store_pets_title">Recent Pets</string>
+    <string name="store_pets_link">View All Pets</string>
+    <string name="store_info_title">Store Info</string>
+
+    <string name="all_pets_title">All Pets</string>
+
+    <string name="pet_name">Name: %1$s</string>
+    <string name="pet_age">Age: %1$d</string>
+    <string name="pet_type">Type: %1$s</string>
+
+</resources>

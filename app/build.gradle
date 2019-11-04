@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+androidExtensions {
+    experimental = true
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.example.petstore"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+def depVersions = [
+        appCompat: '1.1.0',
+        recyclerView: '1.1.0-rc01',
+        coreKtx: '1.1.0',
+        gson: '2.8.5',
+        retrofit: '2.4.0',
+        rxJava2: '2.2.12',
+        rxAndroid2: '2.1.1',
+]
+
+dependencies {
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:${depVersions.appCompat}"
+    implementation "androidx.recyclerview:recyclerview:${depVersions.recyclerView}"
+    implementation "androidx.core:core-ktx:${depVersions.coreKtx}"
+
+    implementation "com.google.code.gson:gson:${depVersions.gson}"
+    implementation "com.squareup.retrofit2:retrofit:${depVersions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${depVersions.retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${depVersions.retrofit}"
+    implementation "io.reactivex.rxjava2:rxjava:${depVersions.rxJava2}"
+    implementation "io.reactivex.rxjava2:rxandroid:${depVersions.rxAndroid2}"
+}

@@ -33,9 +33,13 @@ def depVersions = [
         retrofit: '2.4.0',
         rxJava2: '2.2.12',
         rxAndroid2: '2.1.1',
+        threetenbpVersion: '1.3.5',
+        jsonFireVersion: "1.8.0"
 ]
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: "${rootDir}/libs")
+
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:${depVersions.appCompat}"
     implementation "androidx.recyclerview:recyclerview:${depVersions.recyclerView}"
@@ -45,6 +49,10 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:${depVersions.retrofit}"
     implementation "com.squareup.retrofit2:converter-gson:${depVersions.retrofit}"
     implementation "com.squareup.retrofit2:adapter-rxjava2:${depVersions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-scalars:${depVersions.retrofit}"
     implementation "io.reactivex.rxjava2:rxjava:${depVersions.rxJava2}"
     implementation "io.reactivex.rxjava2:rxandroid:${depVersions.rxAndroid2}"
+    implementation "org.threeten:threetenbp:${depVersions.threetenbpVersion}"
+    implementation "io.gsonfire:gson-fire:${depVersions.jsonFireVersion}"
 }
+

@@ -1,27 +1,27 @@
 package com.example.petstore.data.network.model.mapper
 
-import com.example.petstore.data.network.model.PetNetworkModel
-import com.example.petstore.data.network.model.StoreInfoNetworkModel
-import com.example.petstore.data.network.model.StorePetNetworkModel
 import com.example.petstore.domain.model.PetDomainModel
 import com.example.petstore.domain.model.PetStoreDomainModel
+import com.example.petstore.pets.models.Pet
+import com.example.petstore.store.models.StoreInfo
+import com.example.petstore.store.models.Pet as StorePet
 
-fun PetNetworkModel.toDomain() = PetDomainModel(
+fun Pet.toDomain() = PetDomainModel(
     id = id,
     name = name,
     age = age,
     type = type
 )
 
-fun StorePetNetworkModel.toDomain() = PetDomainModel(
-    id = id,
-    name = name,
-    age = age,
-    type = type
+fun StorePet.toDomain() = PetDomainModel(
+    id = petId,
+    name = petName,
+    age = petAge,
+    type = petType
 )
 
-fun StoreInfoNetworkModel.toDomain() = PetStoreDomainModel(
+fun StoreInfo.toDomain() = PetStoreDomainModel(
     phoneNumber = phoneNumber,
     address = address,
-    recentPets = pets.map { it.toDomain() }
+    recentPets = recentPets.map { it.toDomain() }
 )

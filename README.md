@@ -12,18 +12,20 @@ DONE
       
 **Phase 2 - Code Generation:**  
 SEE [codegen branch](https://github.com/zillow/openapi-tutorial-android/tree/codegen)  
+SEE [contracts repo codegen branch](https://github.com/zillow/openapi-tutorial-contracts/tree/codegen)  
 ```  
 1. Create a basic android project with data/domain/presentation layers.  We will focus on the data layer here.  
-2. Copy codegen jar from contracts repo  --  SEE [contracts repo codegen branch](https://github.com/zillow/openapi-tutorial-contracts/tree/codegen)    
+2. Copy codegen jar from contracts repo (codegen branch)    
 3. Create mappers between these network models and our domain models  
 DONE  
 ```  
   
 **Phase 3 - Reusable Objects + Code Generation:**  
 SEE [sharedcode branch](https://github.com/zillow/openapi-tutorial-android/tree/sharedcode)  
+SEE [contracts repo sharedcode branch](https://github.com/zillow/openapi-tutorial-contracts/tree/sharedcode)  
 ```  
 1. Create a basic android project with data/domain/presentation layers.  We will focus on the data layer here.  
-2. Copy codegen jar from contracts repo  --  SEE [contracts repo sharedcode branch](https://github.com/zillow/openapi-tutorial-contracts/tree/sharedcode)    
+2. Copy codegen jar from contracts repo (sharedcode branch)   
 3. Create mappers between these network models and our domain models    
 DONE  
 ```  
